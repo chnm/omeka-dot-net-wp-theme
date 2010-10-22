@@ -1,0 +1,148 @@
+/*
+Theme Name: Omeka.net
+Theme URI: http://clioweb.org/work/
+Description: A WordPress theme to match the design of Omeka.net
+Version: 1.0
+Author: Jeremy Boggs
+Author URI: http://clioweb.org
+Tags: 
+*/
+
+ul {
+    list-style:disc;
+    margin-left:1.6667em;
+}
+
+ol {
+    list-style:decimal;
+    margin-left:1.6667em; 
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    font-size:1em;
+    margin-bottom:0;
+}
+
+ol ol {
+    list-style:lower-alpha;
+}
+
+#help-content {
+    float:left;
+    width: 500px;
+}
+
+#help-navigation {
+    float:right;
+    width: 240px;
+}
+
+#help-navigation h2 {
+    font-size:1.5em;
+    font-weight:bold;
+    color:rgba(0,0,0,0.5);
+}
+#help-navigation-list {
+    list-style:none;
+    margin-left:0;
+    font-weight:bold;
+}
+
+#help-navigation-list ul {
+    list-style:square;
+    font-size:0.95em;
+    color:rgba(0,0,0,0.25);
+}
+
+#help-navigation a {
+    text-decoration:none;
+    padding:0.5em;
+    display:block;
+}
+
+#help-navigation a:hover {
+    background:rgba(0,0,0,0.05);
+}
+
+#help-navigation-list > li {
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+blockquote {
+    margin-left:2em;
+}
+blockquote * {
+    font-size:1em;
+}
+
+.linklove {
+    display:none;
+}
+
+.cf-ol {
+    list-style:none;
+    margin-left:0;
+}
+
+.cf-ol * {
+    font-size:1em;
+}
+
+#cformsform .cf-ol {
+    font-size:1em;
+}
+
+#cformsform fieldset {
+    display:none;
+}
+
+#cformsform li {
+    padding: 1em 0;
+    border-bottom: 1px dotted #aaa;
+    overflow:hidden;
+    zoom:1;
+}
+
+#cformsform label {
+    width: 140px;
+    margin:0;
+    display:block;
+    float:left;
+    text-align:right;
+    font-weight:bold;
+}
+
+#cformsform input,
+#cformsform select,
+#cformsform textarea,
+.reqtxt,
+.emailreqtxt {
+    display:block;
+    margin:0;
+    margin-left: 160px;
+    
+}
+
+.reqtxt,
+.emailreqtxt {
+    display:block;
+    font-size:0.95em;
+    color: #666;
+}
+
+#cformsform li input,
+#cformsform li textarea {
+    width: 320px;
+    padding:3px;
+    border:1px solid #afae99;
+}
+
+#cformsform li #cforms_captcha {
+    width: 100px;
+}
+
+.captcha {
+    display:block;
+}
