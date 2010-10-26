@@ -29,44 +29,43 @@ ol ol {
     list-style:lower-alpha;
 }
 
-#help-content {
+#blog-content {
     float:left;
     width: 500px;
 }
 
-#help-navigation {
+#blog-navigation {
     float:right;
     width: 240px;
 }
 
-#help-navigation h2 {
+#blog-navigation h2 {
     font-size:1.5em;
     font-weight:bold;
     color:rgba(0,0,0,0.5);
 }
-#help-navigation-list {
+#blog-navigation {
     list-style:none;
     margin-left:0;
     font-weight:bold;
 }
 
-#help-navigation-list ul {
+#blog-navigation ul {
     list-style:square;
-    font-size:0.95em;
     color:rgba(0,0,0,0.25);
 }
 
-#help-navigation a {
+#blog-navigation a {
     text-decoration:none;
     padding:0.5em;
     display:block;
 }
 
-#help-navigation a:hover {
+#blog-navigation a:hover {
     background:rgba(0,0,0,0.05);
 }
 
-#help-navigation-list > li {
+#blog-navigation > li {
     border-bottom:1px solid rgba(0,0,0,0.1);
 }
 
