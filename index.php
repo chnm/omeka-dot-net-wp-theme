@@ -53,17 +53,24 @@
                     		<?php while (have_posts()) : the_post(); ?>
                                 <div class="post">
                     				<h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    				
-                    			<?php if (is_single()): ?>
+                    			
+                    			<?php if (get_bloginfo('home') == 'http://help.omeka.net'): ?>
                                     <div class="post-content">
                     					<?php the_content('Read the rest of this entry &raquo;'); ?>
                                     </div>
-                                    <?php comments_template(); ?>
                                 <?php else: ?>
-                                    <div class="post-content">
-                    					<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
-                    					<a href="<?php echo the_permalink(); ?>">Continue reading&hellip;</a>
-                                    </div>  
+                    			
+                        			<?php if (is_single()): ?>
+                                        <div class="post-content">
+                        					<?php the_content('Read the rest of this entry &raquo;'); ?>
+                                        </div>
+                                        <?php comments_template(); ?>
+                                    <?php else: ?>
+                                        <div class="post-content">
+                        					<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
+                        					<a href="<?php echo the_permalink(); ?>">Continue reading&hellip;</a>
+                                        </div>  
+                                    <?php endif; ?>
                                 <?php endif; ?>
                                 </div>
                     		<?php endwhile; ?>
