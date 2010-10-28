@@ -76,6 +76,13 @@ blockquote * {
     font-size:1em;
 }
 
+.continue-reading {
+    display:block;
+    font-size:1.2em;
+    text-align:right;
+    margin-bottom:1.66667em;
+}
+
 .linklove {
     display:none;
 }

@@ -68,7 +68,7 @@
                                     <?php else: ?>
                                         <div class="post-content">
                         					<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
-                        					<a href="<?php echo the_permalink(); ?>">Continue reading&hellip;</a>
+                        					<a class="continue-reading" href="<?php echo the_permalink(); ?>">Continue reading&hellip;</a>
                                         </div>  
                                     <?php endif; ?>
                                 <?php endif; ?>
@@ -107,6 +107,7 @@
                                     <li class="nav-about"><a href="http://omeka.net/index/about">About</a></li>
                                     <li class="nav-news"><a href="http://blog.omeka.net">News</a></li>
                                     <li class="nav-help"><a href="http://help.omeka.net">Help</a></li>
+                                    <li class="nav-help"><a href="http://help.omeka.net/contact">Contact</a></li>
                                     <li class="nav-tos"><a href="http://omeka.net/terms-of-service">Terms of Service</a></li>
                                 </ul>
                 			<p id="copyright">Omeka.net is a project of the <a href="http://digitalscholar.org">Corporation for Digital Scholarship</a>. Omeka and the Omeka logo are registered trademarks, used here with permission of the <a href="http://chnm.gmu.edu">Center for History and New Media</a>, <a href="http://www.gmu.edu">George Mason University</a>. Copyright &copy; 2010 Corporation for Digital Scholarship.</p>
