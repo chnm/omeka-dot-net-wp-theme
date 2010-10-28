@@ -83,6 +83,11 @@ blockquote * {
     margin-bottom:1.66667em;
 }
 
+.post img {
+    padding-top: 2em;
+    border: 20px solid rgba(0,0,0,0.2);
+}
+
 .linklove {
     display:none;
 }
