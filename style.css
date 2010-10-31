@@ -84,8 +84,9 @@ blockquote * {
 }
 
 .post img {
-    padding-top: 2em;
-    border: 20px solid rgba(0,0,0,0.2);
+    margin-top: 2em;
+    border: 5px solid rgba(0,0,0,0.2);
+    max-width:100%;
 }
 
 .linklove {
