@@ -1,16 +1,26 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-    "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
         <title><?php bloginfo('name'); ?></title>
+        <?php // Get the main style sheet from omeka.net ?>
         <link rel="stylesheet" href="http://omeka.net/application/mu/views/scripts/css/screen.css" type="text/css" media="screen">
+        <?php // Some additional styles just for this WP install. ?>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen">
         <meta name="author" content="Center for History and New Media, George Mason University">
         <meta name="description" content="A hosted service for Omeka, web publishing software for cultural institutions.">
         <!-- Reverse links -->
         <link rev="omeka" href="http://omeka.org" title="Omeka is a free, flexible, and open source web-publishing platform for the display of library, museum, archives, and scholarly collections and exhibitions.">
         <link rev="chnm" href="http://chnm.gmu.edu" title="The Center for History and New Media uses digital media and technology to preserve and present history online, transform scholarship across the humanities, and advance historical education and understanding.">
+              <?php
+              /**
+               * Load some javascripts. It might be better at some point to use
+               * WP's built-in script queueing for this, but since we don't have
+               * many fancy scripts, we'll just add them directly. If you plan
+               * to add more plugins that use JavaScript, should consider
+               * changing this.
+               */
+              ?>
               <!-- JavaScripts -->
               <script src="http://www.google.com/jsapi"></script>
               <script type="text/javascript" charset="utf-8">
@@ -19,14 +29,19 @@
               </script>
               <script type="text/javascript" src="http://omeka.net/application/mu/views/scripts/javascripts/omekanet.js"></script>
               
-              <?php if (is_page('contact')): ?>
+              <?php 
+              /**
+               * If this is the contact page, we'll just some jQuery hackery to
+               * add a required message to the last field of our contact form.
+               * If anyone can find a better way to do this, go for it.
+               */
+              if (is_page('contact')): ?>
                   <script type="text/javascript" charset="utf-8">
                     $(document).ready(function() {
                         $('#li--5').append('<span class="reqtxt message">Required. Verify you are a person and not spam.');
                     });
                   </script>
-                <?php endif; ?>
-                
+            <?php endif; ?>
             </head> 
             <body>
                 <div id="wrap" class="group">
