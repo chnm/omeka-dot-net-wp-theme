@@ -48,34 +48,20 @@
                             <h1><?php bloginfo('name'); ?></h1>
                             <div id="blog-content">
                                 
-                        	<?php if (have_posts()) : ?>
-                                    
-                    		<?php while (have_posts()) : the_post(); ?>
+                        	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                                 <div class="post">
                     				<h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    			
-                    			<?php if (get_bloginfo('home') == 'http://help.omeka.net'): ?>
-                                    <div class="post-content">
-                    					<?php the_content('Read the rest of this entry &raquo;'); ?>
-                                    </div>
-                                <?php else: ?>
-                    			
-                        			<?php if (is_single()): ?>
-                                        <div class="post-content">
-                        					<?php the_content('Read the rest of this entry &raquo;'); ?>
-                                        </div>
-                                        <?php comments_template(); ?>
+                    			    <div class="post-content">
+                        			<?php if (is_single() || is_page()): ?>
+                        				<?php the_content('Read the rest of this entry &raquo;'); ?>
+                                        <?php if (is_single()) comments_template(); // If this is a single blog post, not a page, display the comments template. ?>
                                     <?php else: ?>
-                                        <div class="post-content">
-                        					<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
-                        					<a class="continue-reading" href="<?php echo the_permalink(); ?>">Continue reading&hellip;</a>
-                                        </div>  
+                        				<?php the_excerpt('Read the rest of this entry &raquo;'); ?>
+                        				<a class="continue-reading" href="<?php echo the_permalink(); ?>">Continue reading&hellip;</a>
                                     <?php endif; ?>
-                                <?php endif; ?>
+                                    </div>  
                                 </div>
-                    		<?php endwhile; ?>
-                            
-                            <?php else: ?>
+                    		<?php endwhile; else: ?>
                                 <div class="post">
                                     <h2>Not Found!</h2>
                                     <div class="post-content">
@@ -86,17 +72,14 @@
                             </div>
                             
                             <div id="blog-navigation">
-                                <?php if (get_bloginfo('home') == 'http://help.omeka.net'): ?>
-                                <h2>Contents</h2>
-                        	    <ul id="blog-navigation">
-                        	        <?php echo wp_list_pages('exclude=3,96&title_li='); ?>
+                                <h2>Recent Posts</h2>
+                                <ul>
+                                    <?php wp_get_archives('type=postbypost&limit=20&title_li='); ?>                             
+                                </ul>
+                                <h2>Pages</h2>
+                        	    <ul>
+                        	        <?php wp_list_pages('exclude=3,96&title_li='); ?>
                         	    </ul>
-                        	    <?php else: ?>
-                        	        <h2>Recent Posts</h2>
-                                    <ul>
-                                        <?php wp_get_archives('type=postbypost&limit=20&title_li='); ?>                             
-                                    </ul>
-                        	    <?php endif; ?>
                     	    </div>
                         </div>
                     </div>
