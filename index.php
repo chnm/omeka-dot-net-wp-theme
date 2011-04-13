@@ -50,10 +50,11 @@
                             <a id="logo" href="http://omeka.net"><img src="http://omeka.net/application/mu/views/scripts/images/omekanetlogo.gif" title="Omeka.net"></a>
                             <div id="primary-nav">
                                 <ul id="site-nav">
-                                    <li class="nav-home"><a href="http://omeka.net">Home</a></li>
-                                    <li class="nav-about"><a href="http://omeka.net/index/about">About</a></li>
-                                    <li class="nav-news"><a href="http://blog.omeka.net">News</a></li>
-                                    <li class="nav-help"><a href="http://help.omeka.net">Help</a></li>
+                                    <li class="nav-home"><a href="http://omeka.net/signup">Plans</a></li>
+                                    <li class="nav-showcase"><a href="http://info.omeka.net/showcase">Showcase</a></li>
+                                    <li class="nav-help"><a href="http://info.omeka.net">Help</a></li>
+                                    <li class="nav-news"><a href="http://info.omeka.net/news">News</a></li>
+                                    <li class="nav-about"><a href="http://info.omeka.net/about">About</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -91,9 +92,9 @@
                                 <ul>
                                     <?php wp_get_archives('type=postbypost&limit=20&title_li='); ?>                             
                                 </ul>
-                                <h2>Pages</h2>
+                                <h2>Help Pages</h2>
                         	    <ul>
-                        	        <?php wp_list_pages('exclude=3,96&title_li='); ?>
+                        	        <?php wp_list_pages('exclude=3,96,5,410,423,387&title_li='); ?>
                         	    </ul>
                     	    </div>
                         </div>
@@ -101,11 +102,12 @@
                     <div id="footer">
                         <div class="group">
                                 <ul id="secondary-nav">
-                                    <li class="nav-home"><a href="http://omeka.net">Home</a></li>
-                                    <li class="nav-about"><a href="http://omeka.net/index/about">About</a></li>
-                                    <li class="nav-news"><a href="http://blog.omeka.net">News</a></li>
-                                    <li class="nav-help"><a href="http://help.omeka.net">Help</a></li>
-                                    <li class="nav-help"><a href="http://help.omeka.net/contact">Contact</a></li>
+                                    <li class="nav-home"><a href="http://omeka.net/signup">Plans</a></li>
+                                    <li class="nav-showcase"><a href="http://info.omeka.net/showcase">Showcase</a></li>
+                                    <li class="nav-help"><a href="http://info.omeka.net">Help</a></li>
+                                    <li class="nav-news"><a href="http://info.omeka.net/news">News</a></li>
+                                    <li class="nav-about"><a href="http://info.omeka.net/about">About</a></li>
+                                    <li class="nav-help"><a href="http://info.omeka.net/contact">Contact</a></li>
                                     <li class="nav-tos"><a href="http://www.digitalscholar.org/o_terms">Terms of Service</a></li>
                                 </ul>
                 			<p id="copyright">Omeka.net is a project of the <a href="http://digitalscholar.org">Corporation for Digital Scholarship</a>. Omeka and the Omeka logo are registered trademarks, used here with permission of the <a href="http://chnm.gmu.edu">Center for History and New Media</a>, <a href="http://www.gmu.edu">George Mason University</a>. Copyright &copy; 2010 Corporation for Digital Scholarship.</p>
