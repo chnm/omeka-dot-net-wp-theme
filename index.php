@@ -87,15 +87,19 @@
                         	<?php endif; ?>
                             </div>
                             
-                            <div id="blog-navigation">
+                            <div id="blog-navigation">                            
+                           <?php if (is_home() || is_page(showcase)): ?>
                                 <h2>Recent Posts</h2>
                                 <ul>
                                     <?php wp_get_archives('type=postbypost&limit=20&title_li='); ?>                             
                                 </ul>
+                           <?php endif; ?>
+                           <?php if (is_page(help) || is_page(about)): ?>
                                 <h2>Help Pages</h2>
                         	    <ul>
                         	        <?php wp_list_pages('exclude=3,96,5,410,423,387&title_li='); ?>
                         	    </ul>
+                        	<?php endif;?>
                     	    </div>
                         </div>
                     </div>
