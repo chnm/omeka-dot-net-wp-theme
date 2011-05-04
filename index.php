@@ -94,7 +94,7 @@
                                     <?php wp_get_archives('type=postbypost&limit=20&title_li='); ?>                             
                                 </ul>
                            <?php endif; ?>
-                           <?php if (is_page(help || about)): ?>
+                           <?php if (is_page(help || about) && !is_page(showcase)): ?>
                                 <h2>Help Pages</h2>
                         	    <ul>
                         	        <?php wp_list_pages('exclude=3,96,5,410,423,387&title_li='); ?>
