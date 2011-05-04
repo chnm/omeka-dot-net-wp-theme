@@ -29,6 +29,16 @@ ol ol {
     list-style:lower-alpha;
 }
 
+th {
+	background-color: #628C85;
+	color: #fff;
+	padding: 1em;
+	}
+	
+td {
+	padding: 1em !important;
+	}
+
 #blog-content {
     float:left;
     width: 500px;
@@ -92,6 +102,10 @@ blockquote * {
 .linklove {
     display:none;
 }
+
+.even {
+	background-color: #F9F4E8;
+	}
 
 .cf-ol {
     list-style:none;
