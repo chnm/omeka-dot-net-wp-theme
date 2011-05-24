@@ -88,7 +88,7 @@
                             </div>
                             
                             <div id="blog-navigation">                            
-                           <?php if (is_home() || is_page(showcase)): ?>
+                           <?php if (is_home() || is_page(showcase) || is_single()): ?>
                                 <h2>Recent Posts</h2>
                                 <ul>
                                     <?php wp_get_archives('type=postbypost&limit=20&title_li='); ?>                             
